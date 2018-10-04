@@ -16,7 +16,7 @@ export class FileSearchService {
 
     const url = 'http://localhost:8080/api/rest/v1/file/search?pageSize=100&pageNumber=1'
       + '&fileName=' + fileFilter.fileName
-      + '&parentDirectory=' + fileFilter.parentDirectory;
+      + '&parentDirectory=' + encodeURI(fileFilter.parentDirectory);
 
     return this.httpClient.get<SearchResult>(url);
 

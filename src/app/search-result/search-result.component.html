@@ -1,31 +1,6 @@
 <!--<p *ngFor="let file of fileList">-->
   <!--<i class="far fa-file"></i> {{file.fileName}}-->
 <!--</p>-->
-<div class="card">
-  <div class="card-header">
-    poc-files-search-ui
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Configure search filters</h5>
-
-
-      <div class="form-group">
-        <label for="fileNameInput">File Name</label>
-        <input [(ngModel)]="fileFilter.fileName" (keyup)="doSearch()" type="text" class="form-control" id="fileNameInput" aria-describedby="emailHelp" placeholder="Enter filename">
-      </div>
-
-    <div class="form-group">
-      <label for="parentDirectoryInput">Parent Directory</label>
-      <input [(ngModel)]="fileFilter.parentDirectory" (keyup)="doSearch()" type="text" class="form-control" id="parentDirectoryInput" aria-describedby="emailHelp" placeholder="Enter parent directory">
-    </div>
-
-      <button class="btn btn-primary" (click)="doSearch()">Search</button>
-
-  </div>
-</div>
-
-<br/>
-{{fileList | json}}
 <table class="table table-striped table-dark">
   <thead>
   <tr>
@@ -50,3 +25,4 @@
   </tr>
   </tbody>
 </table>
+

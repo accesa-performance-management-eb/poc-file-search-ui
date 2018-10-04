@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FileListComponent } from './file-list.component';
+import { SearchResultComponent } from './search-result.component';
 
-describe('FileListComponent', () => {
-  let component: FileListComponent;
-  let fixture: ComponentFixture<FileListComponent>;
+describe('SearchResultComponent', () => {
+  let component: SearchResultComponent;
+  let fixture: ComponentFixture<SearchResultComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FileListComponent ]
+      declarations: [ SearchResultComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FileListComponent);
+    fixture = TestBed.createComponent(SearchResultComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,14 +4,16 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FileListComponent } from './file-list/file-list.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 import { FileSizePipePipe } from './pipe/file-size-pipe.pipe';
+import { SearchFiltersComponent } from './search-filters/search-filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileListComponent,
-    FileSizePipePipe
+    SearchResultComponent,
+    FileSizePipePipe,
+    SearchFiltersComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule
