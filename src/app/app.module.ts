@@ -7,16 +7,21 @@ import { AppComponent } from './app.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FileSizePipePipe } from './pipe/file-size-pipe.pipe';
 import { SearchFiltersComponent } from './search-filters/search-filters.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchResultComponent,
     FileSizePipePipe,
-    SearchFiltersComponent
+    SearchFiltersComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule
+    BrowserModule, HttpClientModule, FormsModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
