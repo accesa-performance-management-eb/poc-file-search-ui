@@ -5,8 +5,9 @@
   <thead>
   <tr>
     <!--<th scope="col">#</th>-->
-    <th scope="col">FileName</th>
-    <th scope="col">Size</th>
+    <th scope="col" style="width: 35%">FileName</th>
+    <th scope="col" style="width: 15%">Size</th>
+    <th scope="col" style="width: 15%">Created at</th>
     <th scope="col">Parent</th>
   </tr>
   </thead>
@@ -15,12 +16,14 @@
     <td><span>   ..</span></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr *ngFor="let file of fileList">
     <!--<th scope="row">1</th>-->
     <td *ngIf="!file.isDirectory"><span><i class="far fa-file fa-fw fa-2x"></i>{{file.fileName | slice:0:100}}</span></td>
     <td *ngIf="file.isDirectory"><a (click)="onItemClick(file)"><span><i class="fas fa-folder fa-fw fa-2x"></i>{{file.fileName | slice:0:100}}</span></a></td>
     <td>{{file.fileAttributes.size | fileSizePipe}} </td>
+    <td>{{file.fileAttributes.creationDate | date}} </td>
     <td>{{file.parentDirectory}}</td>
   </tr>
   </tbody>
